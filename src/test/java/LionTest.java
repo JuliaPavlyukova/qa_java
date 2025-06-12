@@ -34,7 +34,6 @@ public class LionTest {
     @Test
     public void testLionMaleIsTrue() throws Exception {
         Lion lion = new Lion("Самец", feline);
-        System.out.println(lion);
         assertTrue(lion.doesHaveMane());
     }
 
