@@ -1,4 +1,3 @@
-package com.example;
 
 import org.mockito.junit.MockitoJUnitRunner;
 import org.junit.Test;
@@ -26,23 +25,19 @@ public class LionTest {
     @Test
     public void testIncorrectLionGender() throws Exception {
         Exception exception = Assert.assertThrows(Exception.class, () -> {
-            Lion lion = new Lion("котенок", feline);
+             new Lion("котенок", feline);
         });
         String expectedResult = "Используйте допустимые значения пола животного - самец или самка";
         assertEquals(expectedResult, exception.getMessage());
     }
 
     @Test
-    public void testLionFemaleIsFalse() throws Exception {
-        Lion lion = new Lion("Самка", feline);
-        assertFalse(lion.doesHaveMane());
-    }
-
-    @Test
     public void testLionMaleIsTrue() throws Exception {
         Lion lion = new Lion("Самец", feline);
+        System.out.println(lion);
         assertTrue(lion.doesHaveMane());
     }
+
 
     @Test
     public void testGetKittens() throws Exception {

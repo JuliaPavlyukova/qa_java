@@ -1,5 +1,3 @@
-package com.example;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +14,7 @@ public class FelineParamTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Teстовые данные: expectedKittenCount - {0};  actualKittenCount - {1}")
     public static Object[][] getKittensCountData() {
         return new Object[][]{
                 {1, 1},

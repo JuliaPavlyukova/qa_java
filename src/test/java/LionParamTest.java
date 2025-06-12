@@ -1,5 +1,3 @@
-package com.example;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +25,7 @@ public class LionParamTest {
         this.hasMane = hasMane;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Teстовые данные: gender - {0};  doesHaveMane - {1}")
     public static Object[][] getParameters() {
         return new Object[][]{
                 {MALE, true},

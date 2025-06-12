@@ -1,22 +1,13 @@
-package com.example;
-
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
-@RunWith(MockitoJUnitRunner.class)
-public class FelineTest {
-    //  private Feline feline;
 
-    @Mock
+public class FelineTest {
+
     private Feline feline;
 
     @Before
@@ -24,11 +15,9 @@ public class FelineTest {
         feline = new Feline();
     }
 
-
     @Test
     public void testFelineEatMeat() throws Exception {
         List<String> list = feline.eatMeat();
-        System.out.println("list.size() " + list.toString());
         Assert.assertEquals(3, list.size());
     }
 
